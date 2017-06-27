@@ -180,16 +180,16 @@ def tarot():
 	#print card_names
 	im = Image.new("RGBA", (panelwidth, panelheight), ("black"))
 	rendertext(im)
-	im1 = Image.open("./plugins/cards/"+str(randsamp[0]))
-	im2 = Image.open("./plugins/cards/"+str(randsamp[1]))
-	im3 = Image.open("./plugins/cards/"+str(randsamp[2]))
-	im4 = Image.open("./plugins/cards/"+str(randsamp[3]))
-	im5 = Image.open("./plugins/cards/"+str(randsamp[4]))
-	im6 = Image.open("./plugins/cards/"+str(randsamp[5]))
-	im7 = Image.open("./plugins/cards/"+str(randsamp[6]))
-	im8 = Image.open("./plugins/cards/"+str(randsamp[7]))
-	im9 = Image.open("./plugins/cards/"+str(randsamp[8]))
-	im10 = Image.open("./plugins/cards/"+str(randsamp[9]))
+	im1 = Image.open("./cards/"+str(randsamp[0]))
+	im2 = Image.open("./cards/"+str(randsamp[1]))
+	im3 = Image.open("./cards/"+str(randsamp[2]))
+	im4 = Image.open("./cards/"+str(randsamp[3]))
+	im5 = Image.open("./cards/"+str(randsamp[4]))
+	im6 = Image.open("./cards/"+str(randsamp[5]))
+	im7 = Image.open("./cards/"+str(randsamp[6]))
+	im8 = Image.open("./cards/"+str(randsamp[7]))
+	im9 = Image.open("./cards/"+str(randsamp[8]))
+	im10 = Image.open("./cards/"+str(randsamp[9]))
 	
 	im2 = im2.rotate(270)
 	rendertext2(im)
@@ -228,3 +228,7 @@ def uploadTarot():
 def generateAndUpload():
 	tarot()
 	return uploadTarot()
+
+if (__name__=="__main__"):
+	tarot()
+
